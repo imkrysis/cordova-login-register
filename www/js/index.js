@@ -14,7 +14,23 @@ function onDeviceReady() {
 
 function checkLogin() {
 
-    
+    if (fieldUsername.value == "") {
+
+        alert("You must type an username")
+
+    } else if (fieldPassword.value == "") {
+
+        alert("You must type a password")
+
+    } else if (localStorage.getItem(fieldUsername.value) == fieldPassword.value) {
+
+        alert("Login successfull")
+
+    } else {
+
+        alert("Invalid credentials")
+
+    }
 
 }
 
